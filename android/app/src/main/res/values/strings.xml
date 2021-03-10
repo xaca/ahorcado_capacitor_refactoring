@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ahorcado App</string>
+    <string name="title_activity_main">Ahorcado App</string>
+    <string name="package_name">com.xacarana.app1</string>
+    <string name="custom_url_scheme">com.xacarana.app1</string>
+</resources>
