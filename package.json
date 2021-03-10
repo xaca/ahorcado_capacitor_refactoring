@@ -1,22 +1,24 @@
 {
-  "name": "proyecto",
+  "name": "ahorcado_capacitor_refactoring",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "Proyecto refactoring para la creación de una aplicación híbrida usando capacitor, un framework que es soportado por Ionic y que es compatible con phonegab/cordova",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaca/ahorcado_capacitor_refactoring.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "dart-sass": "^1.25.0",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify-es": "^2.0.0"
+  "bugs": {
+    "url": "https://github.com/xaca/ahorcado_capacitor_refactoring/issues"
+  },
+  "homepage": "https://github.com/xaca/ahorcado_capacitor_refactoring#readme",
+  "dependencies": {
+    "@capacitor/cli": "^2.4.7",
+    "@capacitor/core": "^2.4.7"
   }
 }
