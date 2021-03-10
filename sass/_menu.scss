@@ -1,0 +1,10 @@
+$color_fondo:orange;
+
+body{
+	background: $color_fondo;
+}
+
+.subrayado{
+	text-decoration: underline;
+	background:$color_fondo;
+}

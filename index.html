@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<!--link rel="stylesheet" href="css/main.css?rnd=243"-->
+	<!--script src="js/main.js"></script-->
+	<style type="text/css">
+		body{
+			margin:0;
+		}
+		section{
+			width:375px;
+			height:667px;
+			text-align: center;
+		}
+		#splash{
+			background: LightSeaGreen;
+		}
+		#home{
+			background: OrangeRed;
+		}
+		#juego{
+			background: Violet;
+		}
+		#instrucciones{
+			background: YellowGreen;
+		}
+		#creditos{
+			background: DeepSkyBlue;
+		}	
+		#instrucciones p{
+			margin:25px;
+			text-align: left;
+		}	
+		.boton{
+			background-color: Navy;
+			color:white;
+			padding: 10px;
+			text-decoration: none;
+		}
+		.volver{
+			margin-left: -300px;
+			line-height: 50px;
+		}
+		.ocultar{
+			display: none;
+		}
+	</style>
+	<script>
+		var splash, home, juego, creditos, instrucciones;
+		var btn_juego,btn_instrucciones,btn_creditos,btns_volver;
+		var secciones;
+
+		window.onload = ()=>{
+			crearReferencias();
+			agregarEventos();
+			setTimeout(()=>{irA(home);},1500);
+		}
+		function crearReferencias()
+		{
+			splash = document.getElementById("splash");
+			home = document.getElementById("home");
+			juego = document.getElementById("juego");
+			creditos = document.getElementById("creditos");
+			instrucciones = document.getElementById("instrucciones");
+			secciones = [splash,home, juego,creditos, instrucciones];
+			btn_juego = document.getElementById("btn_juego");
+			btn_instrucciones = document.getElementById("btn_instrucciones");
+			btn_creditos = document.getElementById("btn_creditos");
+			btns_volver = document.querySelectorAll(".volver");
+		}
+		function agregarEventos()
+		{
+			btn_juego.addEventListener("click",()=>{irA(juego);});
+			btn_instrucciones.addEventListener("click",()=>{irA(instrucciones);});
+			btn_creditos.addEventListener("click",()=>{irA(creditos);});
+
+			for(var i=0;i<=2;i++)
+			{
+				btns_volver[i].addEventListener("click",()=>{irA(home);});
+			}
+		}
+		function ocultarSecciones()
+		{
+			for(i in secciones)
+			{
+				secciones[i].classList.add("ocultar");
+			}
+		}
+		function irA(seccion){
+			ocultarSecciones();
+			seccion.classList.remove("ocultar");
+		}
+	</script>
+</head>
+<body>
+	<!-- Splash -->
+	<section id="splash">
+		<br>
+		<h1>Splash del juego</h1>
+		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
+	</section>
+	<!-- Home -->
+	<section id="home" class="ocultar">
+		<br>
+		<h1>Nombre del juego</h1>
+		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
+		<br>
+		<br>
+		<a href="javascript:void(0);" id="btn_juego">Juego</a><br><br>
+		<a href="javascript:void(0);" id="btn_instrucciones">Instrucciones</a><br><br>
+		<a href="javascript:void(0);" id="btn_creditos">Créditos</a><br>
+	</section>
+	<!-- Juego -->
+	<section id="juego" class="ocultar" >
+		<a href="javascript:void(0);" class="boton volver">&lt;</a>
+		<br>
+		<h1>Juego</h1>
+		<br>
+		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+		<br>
+		<br>
+		<a href="#">Miguel Angel</a>&nbsp;&nbsp;
+		<a href="#">Fernando Botero</a><br><br>
+		<a href="#">Alberto Durero</a>&nbsp;&nbsp;
+		<a href="#">Leonardo da Vinci</a><br><br>
+	</section>
+	<!-- Créditos / Autores -->
+	<section id="creditos" class="ocultar">
+		<a href="javascript:void(0);" class="boton volver">&lt;</a>
+		<br>
+		<br>
+		<h1>Créditos - Estudiantes</h1>
+		<br>
+		<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png" alt="">&nbsp;&nbsp;
+		<span>Nombre Estudiante / Diseñad@r</span> <br>
+		<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png" alt="">&nbsp;&nbsp;
+		<span>Nombre Estudiante / Ingeniero</span> <br>
+		<img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Thor-icon.png" alt="">&nbsp;&nbsp;
+		<span>Nombre Estudiante / Ingeniero</span>
+	</section>
+	<!-- Instrucciones -->
+	<section id="instrucciones" class="ocultar">
+		<a href="javascript:void(0);" class="boton volver">&lt;</a>
+		<h1>Instrucciones</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab minima omnis sed! <br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias repellendus aliquam odit, iusto earum ipsum. Repudiandae deleniti corporis, praesentium accusantium aspernatur temporibus quisquam minus, soluta provident molestiae. Tempore, aliquid, fugit. <br>
+
+		</p>
+		<a href="#" class="boton">&lt;</a>&nbsp;&nbsp;<a href="" class="boton">&gt;</a>
+	</section>
+</body>
+</html>
