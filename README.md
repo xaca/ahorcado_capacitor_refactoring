@@ -18,3 +18,7 @@ Proyecto refactoring para la creación de una aplicación híbrida usando capaci
 - Última versión de node y npm
 - Visual Studio 2017 Community
 - Node-gyp
+
+## Referencias
+
+- [node-gyp](https://github.com/nodejs/node-gyp)
