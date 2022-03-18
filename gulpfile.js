@@ -1,4 +1,5 @@
-const {src,dest} = require('gulp');
+const {series,src,dest} = require('gulp');
+//const merge = require("merge-stream");
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
@@ -6,6 +7,11 @@ const concat = require('gulp-concat');
 const uglify= require('gulp-uglify-es').default;
 
 sass.compiler = require('dart-sass');
+
+function mover_html(){
+	return src("index.html")
+				 .pipe(dest('./bundle/'));
+}
 
 function js(){
 	return src(['./js/constantes.js','./js/operaciones.js','./js/main.js'])
@@ -25,7 +31,7 @@ function css() {
 exports.css = css;
 exports.js = js;
 exports.default = ()=>{};
-
+exports.build = series(css,js,mover_html);
 /*
 mkdir js css sass img
 touch index.html ./sass/index.scs
