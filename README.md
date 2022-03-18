@@ -20,20 +20,6 @@ Proyecto refactoring para la creación de una aplicación híbrida usando capaci
 - Node-gyp
 - Android Studio
 
-## Instrucciones
-
-1. Ejecute el comando npm i, para instalar las dependencias del proyecto
-2. Ejecute gulp bulde para crear el archivo bundle
-3. Ejecute el comando npm install @capacitor/core
-4. Ejecute el comando npm install @capacitor/cli --save-dev
-5. Inicialice el proyecto con npx cap init
-6. Le va a pedir la carpeta del proyecto final que es bundle
-7. Debe ingresar el nombre de la aplicación por ejemplo Hola Mundo Capacitor
-8. Debe ingresar el nombre de paquete único, puede ser co.edu.upb.HolaMundoCapacitor
-9. Instale la plataforma de android para capacitor npm install @capacitor/android
-10. Agregue la plataforma, npx cap add android, se creará el proyecto de android copiando lo que esta en bundle a una carpeta publica de la estructura de archivos de la aplicación
-11. Abra android studio npx cap open android, verifique que este actualizado
-
 ## Referencias
 
 - [Getting starte capacitor](https://capacitorjs.com/docs/getting-started)
