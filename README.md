@@ -22,3 +22,4 @@ Proyecto refactoring para la creación de una aplicación híbrida usando capaci
 ## Notas
 
 - La carpeta www, se puede configurar en la variable destino que esta en el gulp file, dentro de la carpeta dev
+- Si android se instala en una carpeta diferente a la opción por defecto, se debe definir la variable de entorno que permita ejecutar el IDE de la siguiente forma, ejemplo para linux export CAPACITOR_ANDROID_STUDIO_PATH="/opt/android-studio/bin/studio.sh"
