@@ -4,7 +4,7 @@ const rename = require("gulp-rename");
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
-const image = require('gulp-image');
+//const image = require('gulp-image');
 const destino = "../www";
 
 sass.compiler = require('dart-sass');
@@ -54,7 +54,7 @@ function mover_images(){
 exports.css = css;
 exports.js = js;
 exports.images = images;
-exports.release = series(css,js,images,mover_css,mover_js,mover_html);
+//exports.release = series(css,js,images,mover_css,mover_js,mover_html);
 exports.build = series(css,js,mover_css,mover_js,mover_html,mover_images);
 
 exports.default = ()=>{};
